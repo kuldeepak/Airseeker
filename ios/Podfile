@@ -1,0 +1,35 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+platform :ios, '11.0'
+require_relative '../node_modules/@react-native-community/cli-platform-ios/native_modules'
+
+target 'Airseekr' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+  # Pods for Airseekr
+
+  target 'AirseekrTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+  rn_maps_path = '../node_modules/react-native-maps'
+  pod 'react-native-google-maps', :path => rn_maps_path
+  pod 'GoogleMaps'
+  pod 'Google-Maps-iOS-Utils'
+  pod 'rn-fetch-blob', :path => '../node_modules/rn-fetch-blob'
+  use_native_modules!
+
+end
+
+target 'Airseekr-tvOS' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for Airseekr-tvOS
+
+  target 'Airseekr-tvOSTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+end
